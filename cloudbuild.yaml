@@ -1,28 +1,28 @@
 steps:
-- id: 'tf init' 
-  name: 'hashicorp/terraform:0.11.14' 
-  entrypoint: 'sh' 
+- id: 'tf init'
+  name: 'hashicorp/terraform:0.12.24'
+  entrypoint: 'sh'
   args: 
-  - '-c' 
-  - | 
-	terraform init
-
+  - '-c'
+  - |
+      terraform init
+      
 # [START tf-plan]
-- id: 'tf plan' 
-  name: 'hashicorp/terraform:0.11.14' 
-  entrypoint: 'sh' 
+- id: 'tf plan'
+  name: 'hashicorp/terraform:0.12.24'
+  entrypoint: 'sh'
   args: 
-  - '-c' 
+  - '-c'
   - | 
-	terraform plan	
-# [END tf-plan] 
+      terraform plan
+# [END tf-plan]
 
 # [START tf-apply]
-- id: 'tf apply' 
-  name: 'hashicorp/terraform:0.11.14' 
-  entrypoint: 'sh' 
+- id: 'tf apply'
+  name: 'hashicorp/terraform:0.12.24'
+  entrypoint: 'sh'
   args: 
-  - '-c' 
+  - '-c'
   - | 
-	terraform apply -auto-approve
+      terraform apply -auto-approve
 # [END tf-apply]
